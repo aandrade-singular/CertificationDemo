@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.util.HtmlUtils;
 
 @Controller
 @Scope("request")
@@ -193,7 +194,7 @@ public class BlabController {
 			logger.error(ex);
 		}
 
-		return ret.toString();
+		return HtmlUtils.htmlEscape(ret).toString();
 	}
 
 	@RequestMapping(value = "/feed", method = RequestMethod.POST)
