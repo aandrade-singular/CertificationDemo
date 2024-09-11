@@ -164,6 +164,7 @@ public class UserController {
 			logger.info("Execute the Statement");
 			ResultSet result = sqlStatement.executeQuery(sqlQuery);
 			/* END EXAMPLE VULNERABILITY */
+			/*Alteração para commit*/
 
 			// Did we find exactly 1 user that matched?
 			if (result.first()) {
