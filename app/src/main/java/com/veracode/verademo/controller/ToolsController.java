@@ -47,7 +47,7 @@ public class ToolsController {
 		Process proc;
 
 		logger.info("Pinging: " + host);
-
+/**/
 		try {
 			/* START EXAMPLE VULNERABILITY */
 			proc = Runtime.getRuntime().exec(new String[] { "bash", "-c", "ping -c1 " + host });
